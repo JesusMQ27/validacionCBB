@@ -664,16 +664,16 @@ class ContabilidadController extends Controller {
                                 $cuenta_contable = "106114";
                                 $codigo_anexo = "106114";
                             } elseif ($anio_1 >= 2020) {
-                                $cuenta_contable = "106101";
-                                $codigo_anexo = "106101";
+                                $cuenta_contable = "106117";
+                                $codigo_anexo = "106117";
                             }
                         } else if ($lista2->banco == "BBVA") {
                             if ($anio_1 <= 2019) {
                                 $cuenta_contable = "106119";
                                 $codigo_anexo = "106119";
                             } elseif ($anio_1 >= 2020) {
-                                $cuenta_contable = "106105";
-                                $codigo_anexo = "106105";
+                                $cuenta_contable = "106115";
+                                $codigo_anexo = "106115";
                             }
                         }
                         $area_sede = $contabilidad_controller->fnc_obtener_area($lista2->area, $lista2->serie);
@@ -1153,7 +1153,7 @@ class ContabilidadController extends Controller {
                     if ($anio <= 2019) {
                         $cuenta = "106114";
                     } elseif ($anio >= 2020) {
-                        $cuenta = "106101";
+                        $cuenta = "106117";
                     }
                 }
                 break;
@@ -1207,7 +1207,7 @@ class ContabilidadController extends Controller {
                     if ($anio <= 2019) {
                         $anexo = "106114";
                     } elseif ($anio >= 2020) {
-                        $cuenta = "106101";
+                        $cuenta = "106117";
                     }
                 }
                 break;
@@ -1220,7 +1220,7 @@ class ContabilidadController extends Controller {
                     if ($anio <= 2019) {
                         $anexo = "106114";
                     } elseif ($anio >= 2020) {
-                        $cuenta = "106101";
+                        $cuenta = "106117";
                     }
                 }
                 break;
@@ -1233,7 +1233,7 @@ class ContabilidadController extends Controller {
                     if ($anio <= 2019) {
                         $anexo = "106114";
                     } elseif ($anio >= 2020) {
-                        $cuenta = "106101";
+                        $cuenta = "106117";
                     }
                 }
                 break;
@@ -1241,7 +1241,7 @@ class ContabilidadController extends Controller {
                 if ($anio <= 2019) {
                     $anexo = "106114";
                 } elseif ($anio >= 2020) {
-                    $cuenta = "106101";
+                    $cuenta = "106117";
                 }
                 break;
         }

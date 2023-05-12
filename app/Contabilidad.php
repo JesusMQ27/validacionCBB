@@ -1174,10 +1174,10 @@ MIN(pa_numero) as minimo,MAX(pa_numero) as maximo,SUM(pa_cancelado) as monto,
 CASE WHEN YEAR(pa_fecha_emi)<=YEAR(DATE_SUB(NOW(),INTERVAL 4 YEAR)) THEN '759901'
 ELSE
 	CASE pa_banco
-		WHEN 'Scotiabank' THEN '106101'
-		WHEN 'BBVA' THEN '106105'
-		WHEN 'BCP' THEN '104105'
-		WHEN 'INTERBANK' THEN '104107'
+		WHEN 'Scotiabank' THEN '106117'
+		WHEN 'BBVA' THEN '106115'
+		WHEN 'BCP' THEN '104109'
+		WHEN 'INTERBANK' THEN '104110'
 	END
 END	
 AS cuentaContable,detalle as glosaDetalle,
@@ -1697,16 +1697,16 @@ glosaDetalle,anexoAuxiliar,medioPago,tipoDocReferencia, numeroReferencia,fechaRe
 FROM (
 SELECT subDiario,DATE_FORMAT(pa_fecha_pago, '%d/%m/%Y') as fechaComprobante,'MN' as tipoMoneda,pa_observaciones as glosaPrincipal,'' as tipoCambio,'V' as tipoConversion,'S' as moneda,DATE_FORMAT(pa_fecha_pago, '%d/%m/%Y') as fechaTipoCambio,
 CASE pa_banco
-    WHEN 'Scotiabank' THEN '106101'
-    WHEN 'BBVA' THEN '106105'
-    WHEN 'BCP' THEN '104105'
-    WHEN 'INTERBANK' THEN '104107'
+    WHEN 'Scotiabank' THEN '106117'
+    WHEN 'BBVA' THEN '106115'
+    WHEN 'BCP' THEN '104109'
+    WHEN 'INTERBANK' THEN '104110'
 END AS cuentaContable,
 CASE pa_banco
-    WHEN 'Scotiabank' THEN '106101'
-    WHEN 'BBVA' THEN '106105'
-    WHEN 'BCP' THEN '104105'
-    WHEN 'INTERBANK' THEN '104107'
+    WHEN 'Scotiabank' THEN '106117'
+    WHEN 'BBVA' THEN '106115'
+    WHEN 'BCP' THEN '104109'
+    WHEN 'INTERBANK' THEN '104110'
 END AS codigoAnexo,'' as centroCosto,'D' as debeHaber,(pa_cancelado) as importeOriginal,'' as importeDolares,(pa_cancelado) as importeSoles,'EN' as tipoDocumento,CONCAT(pa_serie,'-',pa_numero) as numeroDocumento,
 DATE_FORMAT(pa_fecha_pago, '%d/%m/%Y') as fechaDocumento,DATE_FORMAT(pa_fecha_pago, '%d/%m/%Y') as fechaVencimiento,
 CASE sede
@@ -2008,16 +2008,16 @@ glosaDetalle,anexoAuxiliar,medioPago,tipoDocReferencia, numeroReferencia,fechaRe
 FROM (
 SELECT subDiario,DATE_FORMAT(pa_fecha_emi, '%d/%m/%Y') as fechaComprobante,'MN' as tipoMoneda,pa_observaciones as glosaPrincipal,'' as tipoCambio,'V' as tipoConversion,'S' as moneda,DATE_FORMAT(pa_fecha_emi, '%d/%m/%Y') as fechaTipoCambio,
 CASE pa_banco
-		WHEN 'Scotiabank' THEN '106101'
-		WHEN 'BBVA' THEN '106105'
-		WHEN 'BCP' THEN '104105'
-		WHEN 'INTERBANK' THEN '104107'
+		WHEN 'Scotiabank' THEN '106117'
+		WHEN 'BBVA' THEN '106115'
+		WHEN 'BCP' THEN '104109'
+		WHEN 'INTERBANK' THEN '104110'
 END AS cuentaContable,
 CASE pa_banco
-		WHEN 'Scotiabank' THEN '106101'
-		WHEN 'BBVA' THEN '106105'
-		WHEN 'BCP' THEN '104105'
-		WHEN 'INTERBANK' THEN '104107'
+		WHEN 'Scotiabank' THEN '106117'
+		WHEN 'BBVA' THEN '106115'
+		WHEN 'BCP' THEN '104109'
+		WHEN 'INTERBANK' THEN '104110'
 END AS codigoAnexo,'' as centroCosto,'D' as debeHaber,(pa_cancelado) as importeOriginal,'' as importeDolares,(pa_cancelado) as importeSoles,'EN' as tipoDocumento,CONCAT(pa_serie,'-',pa_numero) as numeroDocumento,
 DATE_FORMAT(pa_fecha_emi, '%d/%m/%Y') as fechaDocumento,DATE_FORMAT(pa_fecha_emi, '%d/%m/%Y') as fechaVencimiento,
 CASE sede
